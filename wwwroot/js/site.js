@@ -63,9 +63,7 @@
     const cut = href.indexOf('#');
     const path = href.slice(0, cut);
     const hash = href.slice(cut);
-    // Smooth-scroll only same-page anchors ("#apps", or "/fr#apps" while on
-    // /fr). Anchors on another page fall through to Blazor navigation.
-    // Trailing slashes are ignored so "/fr#apps" matches a "/fr/" URL.
+    // Smooth-scroll only same-page anchors; others go to Blazor navigation.
     const norm = (p) => p.replace(/\/+$/, '') || '/';
     if (path && norm(path) !== norm(location.pathname)) return;
     if (!hash || hash === '#') return;
