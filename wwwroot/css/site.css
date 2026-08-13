@@ -504,6 +504,12 @@ body.modal-open{overflow:hidden}
 .faq__item[open] summary::after{content:"−"}
 .faq__item p{padding:0 0 18px;color:var(--muted);font-size:15px}
 
+/* ===== Plain message pages (404, thank-you) ===== */
+.page-msg{max-width:720px;margin:0 auto;text-align:center;padding:64px 0}
+.page-msg h1{font-size:clamp(34px,4.5vw,54px);margin:14px 0 12px}
+.page-msg p{color:var(--muted);margin-bottom:8px}
+.page-msg .lp-cta__actions{margin-top:28px}
+
 /* ===== Sticky mobile CTA ===== */
 .mobile-cta{display:none}
 @media (max-width:760px){
